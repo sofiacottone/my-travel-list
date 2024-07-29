@@ -19,12 +19,16 @@ a {
 
 /* #region GENERIC */
 :root {
-  --primary-color: #01ABAA
+  --primary-color: #01ABAA;
+  --secondary-color: #5DD19A;
+  --tertiary-color: #8DE18B;
+  --btn-color: #C1EE7B;
+  --main-text-color: #664b41;
 }
 
 body {
   font-family: sans-serif;
-  color: #5a3e2b;
+  color: var(--main-text-color);
   font-family: "Quicksand";
   font-weight: 500;
 }
@@ -45,6 +49,33 @@ h1 {
   font-weight: 400;
   letter-spacing: -5px;
   padding: 1.4rem 0;
+}
+
+button,
+select,
+input {
+  background-color: var(--btn-color);
+  color: var(--main-text-color);
+  font-family: inherit;
+  border: none;
+  border-radius: 4rem;
+  padding: .625rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-items {
+  background-color: var(--secondary-color);
+  padding: 1.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.add-items button {
+  background-color: var(--primary-color);
+  text-transform: uppercase;
 }
 
 /* #endregion GENERIC */
