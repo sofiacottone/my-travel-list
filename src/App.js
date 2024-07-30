@@ -41,7 +41,7 @@ export default function App() {
           onClearList={handleClearList}
         />
       </main>
-      <Stats />
+      <Stats items={items} />
     </div>
   );
 }
