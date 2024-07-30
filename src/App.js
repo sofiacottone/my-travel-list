@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import AddItems from "./components/AddItems";
 import ItemsList from "./components/ItemsList";
 import Stats from "./components/Stats";
 
 export default function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('items')) || []);
 
   function handleAddItems(item) {
     setItems((items) => [...items, item]);
@@ -22,6 +22,10 @@ export default function App() {
           ? { ...item, packed: !item.packed }
           : item))
   }
+
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(items))
+  }, [items])
 
   function handleClearList() {
     const confirmed = window.confirm('Are you sure you want do delete all items?');

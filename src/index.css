@@ -84,9 +84,10 @@ input {
 /* #region ITEMS */
 .items-list {
   background-color: var(--tertiary-color);
-  padding: 1.4rem 4rem;
-  height: calc(100vh - 10.625rem - 5.25rem - 3.29rem - 7.625rem);
+  height: calc(100vh - 10.625rem - 5.25rem - 1.66rem - 7.625rem);
   overflow-y: auto;
+  display: flex;
+  justify-content: center;
 
   ul {
     display: flex;
@@ -94,6 +95,7 @@ input {
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 1.4rem;
+    width: 80%;
 
     li {
       width: 50%;
@@ -134,8 +136,13 @@ input {
   font-weight: 700;
 
   button {
-    text-transform: uppercase;
     background-color: var(--primary-color);
+    margin-left: 1rem;
+  }
+
+  button,
+  select {
+    text-transform: uppercase;
   }
 }
 
@@ -147,7 +154,7 @@ input {
   background-color: var(--primary-color);
   text-align: center;
   font-weight: 700;
-  padding: 3.2rem 0;
+  padding: 2.3rem 0;
 }
 
 /* #endregion STATISTICS */
