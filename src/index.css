@@ -110,6 +110,11 @@ input {
         padding: .25rem;
         transform: translateY(2px);
       }
+
+      label {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -117,6 +122,7 @@ input {
     height: 1rem;
     width: 1rem;
     accent-color: var(--primary-color);
+    margin-right: 10px;
   }
 }
 
