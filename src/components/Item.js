@@ -1,9 +1,9 @@
-export default function Item() {
+export default function Item({ item }) {
     return (
         <>
             <li>
                 <input type="checkbox" />
-                <span>1 - description </span>
+                <span>{item.quantity} {item.description} </span>
                 <button>❌</button>
             </li>
         </>
